@@ -1,0 +1,160 @@
+<div class="col-md-7 col-lg-8">
+    <h4 class="mb-3">Datos de envio</h4>
+    <form class="needs-validation" novalidate>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">Nombre:</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Apellidos:</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="address" class="form-label">Dirección:</label>
+          <input type="text" class="form-control" id="address" required>
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="address" class="form-label">Referencia:</label>
+          <input type="text" class="form-control" id="address" required>
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Pais</label>
+          <h1></h1>
+          <select class="form-select" id="country" required>
+            <option value="">Escoger...</option>
+            <option>México</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="state" class="form-label">Estado</label>
+          <h1></h1>
+          <select class="form-select" id="state" required>
+            <option value="">Escoger...</option>
+            <option>CDMX</option>
+            <option>Estado de México</option>
+            <option>Jalisco</option>
+            <option>Nuevo León</option>
+            <option>Querétaro</option>
+            <option>Sinaloa</option>
+            <option>Sonora</option>
+            <option>Guanajuato</option>
+            <option>Aguascalientes</option>
+          </select>
+          <div class="invalid-feedback">
+            Please provide a valid state.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">CP</label>
+          <input type="text" class="form-control" id="zip" placeholder="" required>
+          <div class="invalid-feedback">
+            Zip code required.
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <h4 class="mb-3">Tipo Envio: </h4>
+      <div class="col-md-4">
+        <h1></h1>
+        <select class="form-select" id="state" required>
+          <option value="">Escoger...</option>
+          <option>Estafeta</option>
+          <option>DHL</option>
+        </select>
+      </div>
+      <hr class="my-4">
+      <h4 class="mb-3">Tipo Pago</h4>
+
+      <div class="my-3">
+        <div class="form-check">
+          <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+          <label class="form-check-label" for="credit">Tarjeta de Credito</label>
+        </div>
+        <div class="form-check">
+          <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+          <label class="form-check-label" for="debit">Tarjeta de Debito</label>
+        </div>
+        <div class="col-md-4">
+            <input id="msi" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label for="state" class="form-label">Meses sin Intereses</label>
+            <select class="form-select" id="state" required>
+              <option value="">Escoger...</option>
+              <option>3 Meses</option>
+              <option>6 Meses</option>
+              <option>9 Meses</option>
+              <option>12 Meses</option>
+              <option>18 Meses</option>
+            </select>
+          </div>
+      </div>
+
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <label for="cc-name" class="form-label">Nombre de Titular de la Tarjeta</label>
+          <input type="text" class="form-control" id="cc-name" placeholder="" required>
+          <div class="invalid-feedback">
+            Name on card is required
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="cc-number" class="form-label">Numero de Tarjeta</label>
+          <input type="text" class="form-control" id="cc-number" placeholder="" required>
+          <div class="invalid-feedback">
+            Credit card number is required
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="cc-expiration" class="form-label">Expiracion</label>
+          <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+          <div class="invalid-feedback">
+            Expiration date required
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="cc-cvv" class="form-label">CVV</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+            Security code required
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <button class="w-100 btn btn-primary btn-lg" type="submit"(click)="showModal()">PAGAR</button>
+      <hr class="my-4"> 
+      <label class="form-check-label" for="oxxo">PAYPAL</label>  
+      <div #paypal>   
+      </div>
+      <hr class="my-4">
+        <label class="form-check-label" for="oxxo">Deposito Oxxo</label>
+        <button class="w-100 btn btn-danger btn-lg" type="submit"(click)="showModal1()">PAGAR</button>
+      <hr class="my-4">
+        <label class="form-check-label" for="SPEI">Transferencia SPEI</label>
+        <button class="w-100 btn btn-info btn-lg" type="submit"(click)="showModal2()">PAGAR</button>
+        <button class="w-100 btn btn-primary btn-lg" type="submit" routerLink="/user/profile">FINALIZAR</button>
+    </form>
+</div>

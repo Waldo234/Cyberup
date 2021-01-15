@@ -1,0 +1,30 @@
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"> <img src="/assets/logo.jpg" class="img-rounded" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <li class="nav-item"> <a class="nav-link" routerLink="/offers">Lo nuevo</a> </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/asus">Productos</a> </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/conocenos">Conocenos</a> </li>
+          <li class="nav-item"> <a class="nav-link"  routerLink="/terminos">Terminos y Condiciones</a> </li>
+          <li class="nav-item"> <a class="nav-link"  routerLink="/contactanos">Contactanos</a> </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/politica">Politicas</a> </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/metodos">Metodos de Pago</a> </li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/pc">Compra</a> </li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Usuario
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="/user/login">Ingresar</a></li>
+          <li><a href="/user/register">Registarse</a></li>
+        </ul>
+      </div>
+      <li class="nav-item"><img src="/assets/carrito.jpg" class="img-rounded" routerLink="/carrito"></li>
+      <li class="nav-item"> <p class="nav-link">{{ user.name }}</p> </li>
+    </div>
+  </nav>

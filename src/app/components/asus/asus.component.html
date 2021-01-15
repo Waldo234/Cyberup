@@ -1,0 +1,23 @@
+<div>
+  <h1>Nuestros Productos</h1>
+  <div class="row row-cols-md-4" *ngIf="hayRegistros()">
+  <div *ngFor="let art of articulos">
+    <div class="card">
+      <div align="center" class="card-body">
+        <img src ='{{art.foto}}' class="card-img-top" width="100" height="200">
+    </div>
+    <div class="card-body">
+      <h5>{{art.nom_p}}</h5>      
+      <p >Descripcion: {{art.descr}}</p>
+      <p >Stock: {{art.stock}}</p>
+      <p >Clave: {{art.clave_p}}</p>
+      <p >Precio: ${{art.precio}}</p>
+      <a ><button (click)="seleccionar(art.clave_p)">Seleccionar</button></a>
+      <a > <button (click)="altaCa()">Agregar Al Carrito</button></a>        
+      </div>
+    </div>
+  </div>
+  <ng-template #sinarticulos>
+    <p>No hay articulos.</p>
+  </ng-template>
+</div>

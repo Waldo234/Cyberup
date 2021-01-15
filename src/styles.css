@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 980px){
+    #contenedor {
+        width: 90%;
+        max-width: 1024px;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
+}
+@media screen and (max-width: 480px){
+    #encabezado{
+        height: auto;
+    }
+    #contenido{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
+}
